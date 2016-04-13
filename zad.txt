@@ -1,0 +1,35 @@
+//ZADANIE 12.4.2.a  
+  
+#include <iostream.h>  
+  
+struct TData{  
+  int d,m,r;  
+};  
+  
+TData *UstalTData(void){  
+  TData *tmp = new TData;  
+  
+  cout << "Dzien: ";  
+  cin >> tmp -> d;  
+  cout << "Miesiac: ";  
+  cin >> tmp -> m;  
+  cout << "Rok: ";  
+  cin >> tmp -> r;  
+  
+  return tmp;  
+};  
+  
+  
+int main(int argc, char* argv[])  
+{  
+  TData *wsk;  
+  
+  wsk = UstalTData();  
+  
+  cout << "\n\n======\n\n";  
+  cout << wsk->d << "-" << wsk->m << "-" << wsk->r << endl;  
+  
+  delete wsk;  
+  
+  system("Pause");  
+  return 0; 

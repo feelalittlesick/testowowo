@@ -1,3 +1,4 @@
+<<<<<<< HEAD
     //ZADANIE 12.4.2.b  
       
     #include <iostream.h>  
@@ -44,4 +45,52 @@
       
       system("Pause");  
       return 0;  
+=======
+    //ZADANIE 12.4.2.b  
+      
+    #include <iostream.h>  
+      
+    struct TData{  
+      int d,m,r;  
+    };  
+      
+    TData *UstalTData(void){  
+      TData *tmp = new TData;  
+      
+      cout << "Dzien: ";  
+      cin >> tmp -> d;  
+      cout << "Miesiac: ";  
+      cin >> tmp -> m;  
+      cout << "Rok: ";  
+      cin >> tmp -> r;  
+      
+      return tmp;  
+    };  
+      
+    int main(int argc, char* argv[])  
+    {  
+      TData *wsk[5];  
+      
+      
+      //Alokacja i wczytanie  
+      for(int i=0;i<5;i++)  
+        wsk[i] = UstalTData();  
+      
+      cout << "\n##############################\n";  
+      
+      //Wydruk  
+      for(int i=0;i<5;i++){  
+        cout << "data nr " << i << " : "  
+             << wsk[i]->d << "-"  
+             << wsk[i]->m << "-"  
+             << wsk[i]->r << endl;  
+      }  
+      
+      //Zwolnienie pamieci  
+      for(int i=0;i<5;i++)  
+        delete wsk[i];  
+      
+      system("Pause");  
+      return 0;  
+>>>>>>> 3ad713237cb101ab23931446112cd98b59fc13a8
     }  
